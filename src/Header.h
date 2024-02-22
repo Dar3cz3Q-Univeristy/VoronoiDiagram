@@ -3,4 +3,4 @@
 #include "Voronoi.h"
 
 std::vector<Point> initializePoints(std::string);
-void visualizeData(Delunay&, Voronoi&, Point&);
+void visualizeData(Delunay&, Voronoi&, Point&, std::vector<Point>&);

@@ -38,28 +38,36 @@ std::vector<Point> initializePoints(std::string fileName) {
 	return result;
 }
 
-void visualizeData(Delunay& d, Voronoi& v, Point& p)
+void visualizeData(Delunay& d, Voronoi& v, Point& p, std::vector<Point>& w)
 {
 	std::string fileName = "visualize.txt";
 
 	std::ofstream file;
 	file.open(fileName);
 
-	file << "OptimalPoint - Start\n";
+	file << "Points\n";
+
+	for (auto& point : w) {
+		file << point.x << " " << point.y << "\n";
+	}
+
+	file << "+\n";
+
+	file << "OptimalPoint\n";
 
 	file << p.x << " " << p.y;
 
-	file << "\nOptimalPoint - End\n";
+	file << "\n+\n";
 
-	file << "Circumcenters - Start\n";
+	file << "Circumcenters\n";
 
 	for (auto& triangle : d.borders) {
 		file << triangle.circumCenter.x << " " << triangle.circumCenter.y << "\n";
 	}
 
-	file << "Circumcenters - End\n";
+	file << "+\n";
 
-	file << "Triangles - Start\n";
+	file << "Triangles\n";
 
 	for (auto& triangle : d.borders) {
 		file << triangle.verticies[0].x << "," << triangle.verticies[0].y << " ";
@@ -67,15 +75,15 @@ void visualizeData(Delunay& d, Voronoi& v, Point& p)
 		file << triangle.verticies[2].x << "," << triangle.verticies[2].y << "\n";
 	}
 
-	file << "Triangles - End\n";
+	file << "+\n";
 
-	file << "Edges - Start\n";
+	file << "Edges\n";
 
 	for (auto& edge : v.edges) {
 		file << edge.p1.x << "," << edge.p1.y << " " << edge.p2.x << "," << edge.p2.y << "\n";
 	}
 
-	file << "Edges - End\n";
+	file << "+\n";
 
 	file.close();
 }

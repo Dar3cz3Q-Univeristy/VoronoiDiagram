@@ -31,7 +31,7 @@ int main()
 
 	std::cout << "Optimal place:\n" << optimalPlace << "\n";
 
-	visualizeData(triangulacja, diagram, optimalPlace);
+	visualizeData(triangulacja, diagram, optimalPlace, points);
 
 	std::cout << "Data to visualize is in file visualize.txt";
 
