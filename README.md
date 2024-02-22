@@ -33,6 +33,10 @@ Data to visualize is in file visualize.txt
 
 There also should be created ```visualization.txt``` file which contains data you can use in simple [visualizator](https://github.com/Dar3cz3Q/voronoi-diagram-visualizator)
 
+## Running program
+### Visual Studio
+Download repository and just run **Local Windows Debugger**. Program will ask for file location etc.
+
 ## References
 * https://en.wikipedia.org/wiki/Delaunay_triangulation
 * https://en.wikipedia.org/wiki/Bowyer%E2%80%93Watson_algorithm
