@@ -31,7 +31,11 @@ Data to visualize is in file visualize.txt
 
 ![Points on surface with new point found](new_points.png)
 
-There also should be created ```visualization.txt``` file which contains data you can use in simple [visualizator](https://github.com/Dar3cz3Q/voronoi-diagram-visualizator)
+There also should be created ```visualize.txt``` file which contains data you can use in simple [visualizator](https://github.com/Dar3cz3Q/voronoi-diagram-visualizator)
+
+## Running program
+### Visual Studio
+Download repository and just run **Local Windows Debugger**. Program will ask for file location etc.
 
 ## References
 * https://en.wikipedia.org/wiki/Delaunay_triangulation
