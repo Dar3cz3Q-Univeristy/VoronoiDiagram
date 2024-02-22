@@ -107,6 +107,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -124,6 +125,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,14 +135,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Delunay.cpp" />
+    <ClCompile Include="Edge.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Voronoi Diagram.cpp" />
+    <ClCompile Include="Voronoi.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Delunay.h" />
+    <ClInclude Include="Edge.h" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="Voronoi.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
